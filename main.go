@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	fmt.Println("Starting hello-world server...")
+	fmt.Println("Starting forked hello-world server...")
 	http.HandleFunc("/", helloServer)
 	if err := http.ListenAndServe(":8080", nil); err != nil {
 		panic(err)
@@ -14,5 +14,5 @@ func main() {
 }
 
 func helloServer(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprint(w, "Hello world!")
+	fmt.Fprint(w, "Hello world forked!")
 }
