@@ -4,6 +4,7 @@ build:
     context: .
 
 deploy:
+  - echo "This is my error. There are many like it but this one is mine." && exit 1
   - kubectl apply -f k8s.yml
 
 dev:
