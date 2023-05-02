@@ -6,6 +6,14 @@ build:
 deploy:
   - kubectl apply -f k8s.yml
 
+external:
+  readme:
+    icon: okteto
+    notes: README.md
+    endpoints:
+    - name: readme
+      url: https://github.com/okteto/go-getting-started
+
 dev:
   hello-world:
     image: okteto/golang:1
